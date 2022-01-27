@@ -138,13 +138,13 @@ public class ProductServlet extends HttpServlet {
     }
     private void sortIncrease(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ArrayList<Product> products = productService.sortIncrease();
-        request.setAttribute("products", products);
+        request.setAttribute("listProduct", products);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("view.jsp");
         requestDispatcher.forward(request, response);
     }
     private void sortDecrease(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ArrayList<Product> products = productService.sortDecrease();
-        request.setAttribute("products", products);
+        request.setAttribute("listProduct", products);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("view.jsp");
         requestDispatcher.forward(request, response);
     }
